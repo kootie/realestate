@@ -88,7 +88,7 @@ const Home = ({ home, provider, account, escrow, togglePop }) => {
         const signer = await provider.getSigner()
 
         //lender approves
-        const transaction = await escrow.connect(signer).approveSale(hone.id)
+        const transaction = await escrow.connect(signer).approveSale(home.id)
         await transaction.wait()
 
         //lender sends funds to contract
@@ -107,7 +107,7 @@ const Home = ({ home, provider, account, escrow, togglePop }) => {
 
         //seller finalize
         transaction = await escrow.connect(signer).finalizeSale(home.id)
-        await transaction,wait()
+        await transaction.wait()
 
         setHasSold(true)
     }

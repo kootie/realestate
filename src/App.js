@@ -79,7 +79,7 @@ function App() {
         <div className='cards'>
         {homes.map((home, index) => (
 
-          <div className='card' key={index} OnClick={() => toggleProp(home)}>
+          <div className='card' key={index} OnClick={() => togglePop(home)}>
             <div className='card__image'>
               <img src="{home.image}" alt="Home" />
             </div>
